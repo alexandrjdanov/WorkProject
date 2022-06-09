@@ -1,3 +1,4 @@
+package ClassWork3;
 
 import java.io.IOException;
 import java.util.Scanner;

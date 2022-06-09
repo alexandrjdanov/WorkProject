@@ -1,3 +1,5 @@
+package ClassWork3;
+
 public class Ladder {
     public static void main(String[] args) {
         int x;

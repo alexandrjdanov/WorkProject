@@ -1,3 +1,5 @@
+package ClassWork3;
+
 public class CastDemo {
     public static void main(String[] args) {
 

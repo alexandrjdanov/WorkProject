@@ -1,3 +1,5 @@
+package ClassWork3;
+
 import java.util.Scanner;
 
 public class RelLogOps {
@@ -34,5 +36,19 @@ public class RelLogOps {
         if ((currendate == birthday) & !isPromo) System.out.println("будет бонус");
         if (!(currendate == birthday) & !isPromo) System.out.println("сегодня не день рождения");
         if (!(currendate == birthday) & isPromo) System.out.println("сегодня не день рождения, но сегодня акция");
+    }
+
+    public static class Hypotenuse {
+
+        public static void main(String[] args) {
+
+            double x, y, z;
+
+            x = 3.3;
+            y = 4.9;
+
+            z = Math.sqrt(x * x + y * y);
+            System.out.println("ClassWork3.RelLogOps.Hypotenuse is equal with " + z);
+        }
     }
 }
