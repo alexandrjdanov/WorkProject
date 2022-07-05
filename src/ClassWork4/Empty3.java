@@ -8,5 +8,6 @@ public class Empty3 {
         for (i = 1; i <= 5; sum+=i++) {
             System.out.println("Сумма = " + sum);
         }
+        System.out.println("Сумма = " + sum);
     }
 }

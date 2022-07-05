@@ -1,6 +1,12 @@
 package ClassWork7;
 
 public class ErrorMessage {
+
+    final static int OUTERR = 0;
+    final static int INERR = 1;
+    final static int DISKERR = 2;
+    final static int INDERR = 3;
+
     String messages[] = {
             "Output Error",
             "Input Error",

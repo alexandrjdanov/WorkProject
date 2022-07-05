@@ -1,10 +1,15 @@
 package ClassWork7;
 
+import ClassWork9.Level;
+
 public class ErrorMessageDemo {
     public static void main(String[] args) {
         ErrorMessage en = new ErrorMessage();
 
-        System.out.println(en.getMessages(3));
+        Level myVariable = Level.HIGH;
+        System.out.println(myVariable);
+
+        System.out.println(en.getMessages(ErrorMessage.DISKERR));
         System.out.println(en.getMessages(10));
 
         System.out.println("Advanced");
