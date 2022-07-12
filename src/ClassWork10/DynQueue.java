@@ -9,7 +9,7 @@ public class DynQueue implements Queueble{
         putLoc = getLoc = 0;
     }
 
-    @Override
+
     public void put(char ch) {
         if (putLoc == q.length - 1) {
             char t[] = new char[q.length * 2];
@@ -22,14 +22,14 @@ public class DynQueue implements Queueble{
         q[putLoc] = ch;
     }
 
-    @Override
-    public char get() {
+
+    public char get() throws QueueEmptyException{
         if (getLoc == putLoc) {
-            System.out.println(" - The queue is empty");
-            return (char) 0;
+            throw new QueueEmptyException();
         }
         getLoc++;
         return q[getLoc];
     }
+
 }
 

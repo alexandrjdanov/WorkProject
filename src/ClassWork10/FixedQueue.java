@@ -9,22 +9,22 @@ public class FixedQueue implements Queueble{
         putLoc = getLoc = 0;
     }
 
-    public void put(char ch) {
+    public void put(char ch) throws QueueFullException{
         if (putLoc == q.length - 1) {
-            System.out.println(" - The queue is full");
-            return;
+            throw new QueueFullException(q.length);
         }
         putLoc++;
         q[putLoc] = ch;
     }
 
-    public char get() {
+    public char get() throws QueueEmptyException{
         if (getLoc == putLoc) {
-            System.out.println(" - The queue is empty");
-            return (char) 0;
+            throw new QueueEmptyException();
         }
         getLoc++;
         return q[getLoc];
     }
+
+
 
 }

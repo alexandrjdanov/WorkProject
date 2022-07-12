@@ -1,6 +1,6 @@
 package ClassWork10;
 
-public class CircularQueue implements  Queueble{
+public class CircularQueue implements Queueble{
 
     private char q[];
     private int putLoc, getLoc;
@@ -10,22 +10,20 @@ public class CircularQueue implements  Queueble{
         putLoc = getLoc = 0;
     }
 
-    @Override
-    public void put(char ch) {
+
+    public void put(char ch) throws QueueFullException{
         if (putLoc + 1 == getLoc | ((putLoc == q.length - 1) & (getLoc == 0))) {
-        System.out.println(" - The queue is full");
-        return;
+        throw new QueueFullException(q.length);
     }
     putLoc++;
         if (putLoc == q.length) putLoc = 0;
         q[putLoc] = ch;
     }
 
-    @Override
-    public char get() {
+
+    public char get() throws QueueEmptyException{
         if (getLoc == putLoc) {
-            System.out.println(" - The queue is empty");
-            return (char) 0;
+            throw new QueueEmptyException();
         }
         getLoc++;
         if (getLoc == q.length) getLoc = 0;
