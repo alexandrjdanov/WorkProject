@@ -3,7 +3,7 @@ package ClassWork12;
 import java.time.Year;
 import java.util.Objects;
 
-public class Book {
+public class Book implements Comparable<Book>{
 
     private int numPages;
     private String author;
@@ -14,6 +14,15 @@ public class Book {
 
     public int getAge() {
         return (Year.now().getValue() - (int)yearOfPublication);
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        if (this.yearOfPublication > o.yearOfPublication)
+        return 1;
+        else if (this.yearOfPublication < o.yearOfPublication)
+            return -1;
+        else return 0;
     }
 
     enum Genre {

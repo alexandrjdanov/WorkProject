@@ -33,5 +33,27 @@ public class Vehicle {
         return (double) distance / mpg;
     }
 
+    public int getPassengers() {
+        return passengers;
+    }
 
+    public void setPassengers(int passengers) {
+        this.passengers = passengers;
+    }
+
+    public int getFuelcap() {
+        return fuelcap;
+    }
+
+    public void setFuelcap(int fuelcap) {
+        this.fuelcap = fuelcap;
+    }
+
+    public int getMpg() {
+        return mpg;
+    }
+
+    public void setMpg(int mpg) {
+        this.mpg = mpg;
+    }
 }
